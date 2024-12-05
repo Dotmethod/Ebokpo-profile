@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+
+    --primary-clr: #ffaf2a;
+    --dark-bg-clr: #252634;
+    --dark-bg-light-clr: #333547;
+    --light-head-clr: #fafbfd;
+    --light-text-clr: #d8d9db;
+}
+body{
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
+    padding: 0px 8%;
+    background-color: var(--dark-bg-clr);
+    color: var(--light-head-clr);
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 700px;
+}
+.home .background-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+}
+.home .background-text h1{
+    font-size: calc(42px + 3.5vw);
+    font-weight: 900;
+    letter-spacing: 50px;
+    opacity: 0.2;
+    /*-webkit-background-clip: text;*/
+    color: transparent;
+    -webkit-text-stroke: 0.02rem var(--primary-clr);
+}
+.home .background-text h1:nth-of-type(1){
+    position: absolute;
+    top: 110px;
+    left: -8%;
+}
+.home .background-text h1:nth-of-type(2){
+    position: absolute;
+    right: -2%;
+    bottom: 50px;
+}
+.home nav{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    left: 0;
+    right: 0;
+    padding: 0px 8%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-bg-light-clr);
+    z-index: 100;
+}
+.home .navBar .logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.home .navBar .logo img{
+    width: 140px;
+}
+.navBar .nav-links{
+    list-style: none;
+}
+.navBar .nav-links li{
+    display: inline-block;
+    margin-left: 20px;
+}
+.navBar .nav-links li a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--light-text-clr);
+    transition: color 0.03s;
+}
+.navBar .nav-links li a:hover{
+    color: var(--primary-clr);
+}
+button.btn{
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid var(--primary-clr);
+    color: var(--light-text-clr);
+    border-radius: 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.04s;
+    cursor: pointer;
+}
+button.btn:hover{
+    background-color: transparent;
+    color: var(--primary-clr);
+}
+.home .home-desc{
+    position: relative;
+    height: calc(100% - 80px);
+    top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 45% 25px;
+}
+.home-desc .intro{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.home-desc .intro h3{
+    position: relative;
+    display: inline-block;
+    color: var(--primary-clr);
+    font-size: calc(16px + 0.05vw);
+    font-weight: 400;
+    cursor: pointer;
+}
+.home-desc .intro h3::before{
+    position: relative;
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: var(--primary-clr);
+    margin-right: 10px;
+    margin-bottom: 6px;
+    transition: width 0.05s;
+}
+.home-desc .intro h3:hover::before{
+    width: 65px;
+}
+.home-desc .intro h1{
+    font-size: calc(32px + 2.5vw);
+    font-weight: 500;
+    color: var(--light-head-clr);
+    margin: 10px 0px 15px;
+}
+.home-desc .intro p{
+    font-size: 15px;
+    color: var(--light-text-clr);
+    line-height: 1.8;
+    max-width: 500;
+}
+.home-desc .intro .Cv-btn{
+    margin-top: 30px;
+}
+.home-desc .Profile-Img{
+    position: relative;
+    margin-left: -30%;
+    height: 100%;
+}
+.home-desc .Profile-Img img{
+    width: 100%;
+    height: 550px;
+    width: auto;
+    position:absolute;
+    bottom: 0;
+    mix-blend-mode:screen;
+}
+.home-desc .Social-Media{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-desc .Social-Media a{
+    position: relative;
+    color: var(--light-text-clr);
+    text-decoration: none;
+    font-size: calc(10px + 0.4vw);
+    margin: 10px 0px;
+    transition: color 0.3s;
+}
+.home-desc .Social-Media a:hover{
+    color: var(--primary-clr);
+}
+.home-desc .Social-Media a:first-child::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100px;
+    background-color: var(--light-text-clr);
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.home-desc .Social-Media a:last-child::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100px;
+    background-color: var(--light-text-clr);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
